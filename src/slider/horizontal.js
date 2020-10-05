@@ -13,10 +13,10 @@ const Thumb = styled.span.attrs(props => ({
 }))`
 position: absolute;
 z-index:101;
-width: 12px;
-height: 12px;
+width: 14px;
+height: 14px;
 margin-left: -6px;
-margin-top: -5px;
+margin-top: -6px;
 box-sizing: border-box;
 border-radius: 50%;
 outline: 0;
@@ -166,7 +166,7 @@ const generateHashMarkers = () => {
     return <Thumb 
      key={`thumb_${i}`}
      color={color}
-     focus= { (thumbFocus && activeIndex === i) ? `0px 0px 0px 14px ${convertColor(color, -0.5, 0.16)}` : '' }
+     focus= { ((selectionDown || thumbFocus) && activeIndex === i) ? `0px 0px 0px 14px ${convertColor(color, -0.5, 0.16)}` : '' }
      data-index={i}
      tabIndex={i+1}
      onFocus={props.onFocus}

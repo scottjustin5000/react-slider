@@ -14,7 +14,7 @@ position: absolute;
 z-index:101;
 width: 12px;
 height: 12px;
-margin-left: -6px;
+margin-left: -5px;
 margin-top: -5px;
 box-sizing: border-box;
 border-radius: 50%;
@@ -165,7 +165,7 @@ const generateHashMarkers = () => {
   return <VerticalThumb 
     key={`vthumb_${i}`}
     color={color}
-    focus= { (thumbFocus && activeIndex === i)  ? `0px 0px 0px 14px ${convertColor(color, -0.5, 0.16)}` : '' }
+    focus= { ((selectionDown || thumbFocus) && activeIndex === i)  ? `0px 0px 0px 14px ${convertColor(color, -0.5, 0.16)}` : '' }
     data-index={i}
     tabIndex={i+1}
     onFocus={props.onFocus}

@@ -127,7 +127,7 @@ const SliderComp = (props) => {
 
     const beginDrag = (event) => {
       if(activeIndex) return
-       if(event.changedTouches && range) {
+       if(event.changedTouches) {
         const val = getCurrentValue(event)
         const per = toPercent(val, min, max)
         const i = getClosestIndex(trackValue, per)
@@ -153,7 +153,7 @@ const SliderComp = (props) => {
     }
   
     const onTouchMove = (event) => {
-      event.preventDefault()
+      //event.preventDefault()
       dragging(event)
     }
   
