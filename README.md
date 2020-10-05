@@ -13,17 +13,74 @@ npm install --save react-slider
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'react-slider'
-import 'react-slider/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+import Slider from 'react-slider'
+<div style={{width: '200px'}}>
+ <Slider 
+  onChange={onChange}
+   />
+</div>
 ```
+
+```jsx
+import Slider from 'react-slider'
+<div style={{width: '200px'}}>
+  <Slider 
+  onChange={onChange}
+  showTip
+  showHashes 
+  start={30} 
+  step={10} 
+  min={0} 
+  max={230} />
+   />
+
+</div>
+```
+
+```jsx
+import Slider from 'react-slider'
+
+<div style={{width: '200px'}}>
+ <Slider 
+  onChange={onChange}
+  start={[0,200]} 
+  min={0} 
+  max={200}  />
+</div>
+```
+
+```jsx
+
+<div style={{height: '300px'}}>
+ <Slider 
+  vertical
+  showTip
+  onChange={onChange}
+  min={0} 
+  max={200}  />
+</div>
+```
+
+
+```jsx
+import Slider from 'react-slider'
+
+<div style={{height: '300px'}}>
+ <Slider 
+  vertical
+  color='#39FF14'
+  onChange={onChange}
+  start={[10,150]} 
+  min={0} 
+  max={200}  />
+</div>
+```
+
+
+
+
+
+See Examples [Here](http://sj5000-react-slider.s3-website-us-east-1.amazonaws.com)
 
 ## License
 
