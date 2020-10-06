@@ -100,13 +100,17 @@ const SliderComp = (props) => {
           let clone = labelValue.slice()
           clone[activeIndex] = dragged && nearest ? nearest : toFormatted(val,precision)
           setLabelValue(clone)
+          if(props.onChange) {
+            props.onChange(clone)
+          }
         } else {
          setTrackValue([per])
          setLabelValue([dragged && nearest ? nearest : toFormatted(val,precision)])
-        }
-        if(props.onChange) {
+         if(props.onChange) {
           props.onChange(nearest || toFormatted(val,precision))
         }
+        }
+       
       }
     }
 
@@ -153,7 +157,6 @@ const SliderComp = (props) => {
     }
   
     const onTouchMove = (event) => {
-      //event.preventDefault()
       dragging(event)
     }
   
