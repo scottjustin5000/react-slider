@@ -4,11 +4,6 @@
 
 [![NPM](https://img.shields.io/npm/v/react-slider.svg)](https://www.npmjs.com/package/react-slider) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## Install
-
-```bash
-npm install --save react-slider
-```
 
 ## Usage
 
@@ -32,7 +27,6 @@ import Slider from 'react-slider'
   step={10} 
   min={0} 
   max={230} />
-   />
 
 </div>
 ```
@@ -76,11 +70,18 @@ import Slider from 'react-slider'
 </div>
 ```
 
-
-
-
-
 See Examples [Here](http://sj5000-react-slider.s3-website-us-east-1.amazonaws.com)
+
+
+## Options
+  min            default 0
+  max            default 100
+  color          default #90caf9
+  step           default null
+  showHashes     default false
+  vertical       default false 
+  range          default false 
+  start          default 0, [0,100] for range
 
 ## License
 
